@@ -61,7 +61,8 @@ def solicitar_datos(lista_usuarios):
 
 def comprobar(_, flag):
     mensaje = {0: 'Ingresa el nombre: ', 1: 'Ingresa la edad: ', 2: 'Ingresa el peso: ', 3: 'Ingresa la altura: ', 4: 'Ingresa una respuesta (si/no): '}
-    while True:        dato = input(mensaje.get(flag, "Ingresa un dato: ")).strip().lower()
+    while True:        
+        dato = input(mensaje.get(flag, "Ingresa un dato: ")).strip().lower()
         try:
             if flag == 0 and dato != '': return dato.title()
             elif flag in (1, 2, 3) and float(dato) > 0.0: return int(dato) if flag == 1 else float(dato)
