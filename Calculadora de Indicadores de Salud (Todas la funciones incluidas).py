@@ -10,6 +10,12 @@ def clasificar_imc(imc):
 def FCM(edad):
     return 220 - edad
 
+# ---------------------------------------------------------------------------------------------------------- #
+#                                                                                                            #
+#                                                    FORMA 1                                                 #
+#                                                                                                            #
+# ---------------------------------------------------------------------------------------------------------- #
+
 def comprobar(dato, flag):
     while True:
         try:
@@ -43,7 +49,41 @@ def solicitar_datos(lista_usuarios):
         lista_usuarios.append(dict_usuarios)
         if resp == 'no': break
     return lista_usuarios
-    
+
+
+# ---------------------------------------------------------------------------------------------------------- #
+#                                                                                                            #
+#                                                    FORMA 2                                                 #
+#                                                                                                            #
+# ---------------------------------------------------------------------------------------------------------- #
+
+"""
+
+def comprobar(_, flag):
+    mensaje = {0: 'Ingresa el nombre: ', 1: 'Ingresa la edad: ', 2: 'Ingresa el peso: ', 3: 'Ingresa la altura: ', 4: 'Ingresa una respuesta (si/no): '}
+    while True:        dato = input(mensaje.get(flag, "Ingresa un dato: ")).strip().lower()
+        try:
+            if flag == 0 and dato != '': return dato.title()
+            elif flag in (1, 2, 3) and float(dato) > 0.0: return int(dato) if flag == 1 else float(dato)
+            elif flag == 4 and dato in ('si', 'no'): return dato
+            else: raise ValueError
+        except ValueError:
+            print("Dato inválido, por favor intenta nuevamente.")
+
+def solicitar_datos(lista_usuarios):
+    while True:
+        nombre = comprobar(None, 0)
+        edad = comprobar(None, 1)
+        peso = comprobar(None, 2)
+        altura = comprobar(None, 3)
+        dict_usuarios = {'nombre': nombre, 'edad': edad, 'peso': peso, 'altura': altura}
+        lista_usuarios.append(dict_usuarios)
+        resp = comprobar(None, 4)
+        if resp == 'no': break
+    return lista_usuarios
+
+"""
+
 # Main
 lista_usuarios = []
 lista_usuarios = solicitar_datos(lista_usuarios)
