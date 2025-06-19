@@ -11,7 +11,7 @@
   - Crea un programa llamado "SaludApp" que permita al usuario registrar su información básica y calcular dos indicadores:
   - Índice de Masa Corporal (IMC):
     
-        Fórmula: peso / (altura²)
+        imc = peso / (altura**2)
 - Clasificación:
     - < 18.5: Bajo peso
     - 18.5–24.9: Normal
@@ -19,7 +19,7 @@
     - 30 o más: Obesidad
   - Frecuencia cardíaca máxima (FCM):
 
-        Fórmula: 220 - edad
+        fcm = 220 - edad
   - El programa debe repetirse hasta que el usuario decida salir.
     
 - Requisitos técnicos
@@ -81,8 +81,18 @@
 
 # IMPORTANTE
 - Para el caso del código que contiene 2 partes, la 'Parte 2' solo contiene las 5 funciones principales y la 'Parte 1' el 'Main Program' pero para hacer uso de ello ya que estan en 2 archivos diferentes debemos incluir el siguiente extracto de código:
-  - TENER EN CUENTA - deben cambiar el nombre del archivo 'Calculadora de Indicadores de Salud (Parte 2).py' a 'Calculadora_de_Indicadores_de Salud_(Parte_2).py' para no tener errores, EN EL CODIGO APARECE COMO 'funciones' DEBEN CAMBIARLO:
-      
-        from Calculadora_de_Indicadores_de_Salud_(Parte_2) import *
+  - TENER EN CUENTA:
+    - Deben cambiar el nombre del archivo 'Calculadora de Indicadores de Salud (Parte 2).py' a 'Calculadora_de_Indicadores_de_Salud_(Parte_2).py' para no tener errores.
+    - EN EL CODIGO APARECE COMO 'funciones'.
+ 
+  - El nombre del archivo:
+       
+        Calculadora de Indicadores de Salud (Parte 2).py
+  - Cambiar a:
+     
+        Calculadora_de_Indicadores_de_Salud_(Parte_2).py
+  -  Añadir/Cambiar al inicio de 'Calculadora de Indicadores de Salud (Parte 1).py' (LINEA 1): 
+
+         from Calculadora_de_Indicadores_de_Salud_(Parte_2) import *
 
   
